@@ -1,0 +1,37 @@
+<mvc:View controllerName="com.demo.demo01.controller.catalogue"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:tnt="sap.tnt"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page title="Available all products">
+    <List
+    id="product_list"
+    headerLevel="H1"
+    headerText="Catalogue"
+    items="{/Employees}" 
+    >
+    <StandardListItem type="Navigation"
+      title="{Title}" 
+      description="{FirstName} - {LastName}" 
+      counter="{EmployeeID}"
+  
+     />
+    
+
+    </List>
+
+
+    <tnt:NavigationList
+	     
+		id="navigationList"
+		width="320px"
+        items="{ path: '/Employees', parameters: { $top: 2 } }"
+		selectedKey="subItem3">
+		<tnt:NavigationListItem text="{Title}" key="rootItem1" icon="sap-icon://employee">
+			<tnt:NavigationListItem text="{FirstName}" />
+		</tnt:NavigationListItem>
+		
+	</tnt:NavigationList>
+
+    </Page>
+</mvc:View>

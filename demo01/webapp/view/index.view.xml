@@ -1,0 +1,42 @@
+<mvc:View controllerName="com.demo.demo01.controller.index"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <VBox 
+        justifyContent="Center"
+        alignItems="Center"
+        fitContainer="true"
+        >
+        <items>
+        <Text class="big-text"
+        
+        
+
+
+        text="Warm Welcome to Product Catalogue">
+        </Text>
+
+        <Title
+        level="H1"
+        text="Provide your authentication details below"
+        
+        ></Title>
+
+        <VBox 
+
+        >
+        <Label text="Email" labelFor="email" />
+		<Input id="email" required="true" />
+        <Label text="Password" labelFor="password" />
+		<Input id="password" required="true" />
+        <Button text="Log In" type="Emphasized" press="onLogin" />
+        </VBox>
+
+          
+
+        </items>
+        </VBox>
+        </content>
+    </Page>
+</mvc:View>
